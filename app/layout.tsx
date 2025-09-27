@@ -1,7 +1,8 @@
 import './globals.css'
 import { JetBrains_Mono, Poppins } from 'next/font/google'
-
-// Load fonts
+import Header from "@/components/ui/Header"
+import PageTransition from "@/components/Pagetransition"
+  // Load fonts
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
@@ -20,13 +21,17 @@ export const metadata = {
 }
 
 import { ReactNode } from 'react';
+import Pagetransition from '@/components/Pagetransition'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${jetbrainsMono.variable} ${poppins.variable}`}>
       <body className="antialiased">
-        <header/>
-        {children}
+        <Header/>
+        <Pagetransition>   {children}  </Pagetransition>
+       
+       
+        
       </body>
     </html>
   )
