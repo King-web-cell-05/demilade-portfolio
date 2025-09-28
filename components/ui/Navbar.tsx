@@ -28,7 +28,7 @@ const links = [
 
 const Navbar = () => {
     const pathname = usePathname();
-  return (
+      return (
     <nav className="flex gap-8">
         {links.map((link, index) => (
             <Link href={link.path}       key={index}  className={`${link.path === pathname && "text-emerald-300 border-b-2 border-emerald-300"}

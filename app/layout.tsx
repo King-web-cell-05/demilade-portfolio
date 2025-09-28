@@ -22,12 +22,14 @@ export const metadata = {
 
 import { ReactNode } from 'react';
 import Pagetransition from '@/components/Pagetransition'
+import Stairtransition from '@/components/Stairtransition'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${jetbrainsMono.variable} ${poppins.variable}`}>
       <body className="antialiased">
         <Header/>
+        <Stairtransition/>
         <Pagetransition>   {children}  </Pagetransition>
        
        

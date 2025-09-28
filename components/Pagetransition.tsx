@@ -10,9 +10,10 @@ const PageTransition: React.FC<React.PropsWithChildren<{}>> = ({ children }) => 
     <AnimatePresence mode="wait">
       <motion.div
         key={pathname}
-        initial={{ opacity: 0,  }}       // start faded & slightly down
+        initial={{ opacity: 0, y: 20 }}       // start faded & slightly down
         animate={{ opacity: 1, }}       // animate in
         transition={{ delay:0.5, duration: 0.4, ease: "easeInOut" }}
+        className="min-h-screen w-full"
       >
         {children}
       </motion.div>
