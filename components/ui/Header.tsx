@@ -9,8 +9,11 @@ const Header = () => {
     <header className="py-8 xl:py-12 text-white ">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
-            King<span className="text-emerald-300">.</span>
+          <h1 className="text-4xl font-semibold text">
+            <span className="text ml-5" title="King">
+              King
+            </span>
+            <span className="text-emerald-300">.</span>
           </h1>
         </Link>
         <div className="hidden md:flex items-center gap-8">

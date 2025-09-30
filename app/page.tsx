@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Socials from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats"
 const Home = () => {
   return (
     <section className="h-screen relative flex items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-hidden">
@@ -50,6 +51,9 @@ const Home = () => {
           <Photo />{" "}
         </div>{" "}
       </div>{" "}
+    <div className="absolute bottom-38 w-full flex flex-col justify-center xl:justify-start px-3 sm:px-0 ">
+        <Stats/>
+    </div>
     </section>
   );
 };

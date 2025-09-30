@@ -14,7 +14,7 @@ const Photo = () => {
         }}
         className="relative flex items-center justify-center 
                    mb-8 sm:mb-12 
-                   xl:mb-0 xl:translate-x-60 xl:-translate-y-20 -translate-y-20 sm:-translate-y-50"
+                   xl:mb-0 xl:translate-x-60 xl:-translate-y-30 -translate-y-20 sm:-translate-y-50"
       >
         {/* Circle (background) */}
         <motion.svg
