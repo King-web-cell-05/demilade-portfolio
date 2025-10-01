@@ -13,13 +13,22 @@ const Stats = () => {
     <section>
       <div className="container mx-auto">
         {/* Always horizontal */}
-        <div className="stats flex flex-row gap-4 sm:gap-10 items-center justify-center xl:justify-start">
+        <div className="stats flex flex-row gap-2 sm:gap-10 items-center justify-center xl:justify-start">
           {stats.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl xl:text-6xl font-extrabold text-emerald-300">
+            <div
+              key={index}
+              className="flex flex-col items-center text-center"
+            >
+              <h3
+                className="text-2xl sm:text-2xl md:text-4xl xl:text-6xl font-extrabold text-emerald-300
+                max-[375px]:text-[8px]" // much smaller numbers on iPhone SE
+              >
                 <CountUp end={item.num} duration={5} delay={0.5} />
               </h3>
-              <p className="mt-1 text-xs sm:text-sm md:text-base xl:text-lg text-gray-300">
+              <p
+                className="mt-1 text-xs sm:text-sm md:text-base xl:text-lg text-gray-300
+                max-[375px]:text-[6px] leading-tight" // shrink labels more
+              >
                 {item.text}
               </p>
             </div>
