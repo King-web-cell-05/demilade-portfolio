@@ -5,7 +5,7 @@ const stats = [
   { num: 2, text: "Years of Experience" },
   { num: 15, text: "Projects Completed" },
   { num: 8, text: "Technologies Mastered" },
-  { num: 500, text: "Code Commits" },
+  { num: 250, text: "Code Commits" },
 ];
 
 const Stats = () => {
@@ -21,13 +21,13 @@ const Stats = () => {
             >
               <h3
                 className="text-2xl sm:text-2xl md:text-4xl xl:text-6xl font-extrabold text-emerald-300
-                max-[375px]:text-[8px]" // much smaller numbers on iPhone SE
+                max-[344px]:text-[8px]" // much smaller numbers on iPhone SE
               >
                 <CountUp end={item.num} duration={5} delay={0.5} />
               </h3>
               <p
                 className="mt-1 text-xs sm:text-sm md:text-base xl:text-lg text-gray-300
-                max-[375px]:text-[6px] leading-tight" // shrink labels more
+                max-[344px]:text-[6px] leading-tight" // shrink labels more
               >
                 {item.text}
               </p>

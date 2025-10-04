@@ -28,22 +28,22 @@ const Home = () => {
               variant="outline"
               size="sm"
               className="uppercase flex items-center gap-1 sm:gap-3 px-2 py-1 sm:px-4 sm:py-3 text-sm sm:text-lg 
-                max-[375px]:px-[3px] max-[375px]:py-[1px] max-[375px]:text-[8px]"
+                max-[344px]:px-[3px] max-[344px]:py-[1px] max-[344px]:text-[8px]"
             >
               <span>Download CV</span>
-              <FiDownload className="text-lg sm:text-2xl max-[375px]:text-[10px]" />
+              <FiDownload className="text-lg sm:text-2xl max-[344px]:text-[10px]" />
             </Button>
             <div className="mb-2 sm:mb-6 xl:mb-0">
               <Socials
-                containerStyles="flex gap-2 sm:gap-6 max-[375px]:gap-[2px]"
-                iconstyles="w-6 h-6 sm:w-9 sm:h-9 max-[375px]:w-5 max-[375px]:h-5 border border-emerald-300 rounded-full flex justify-center items-center text-emerald-300 text-[10px] sm:text-base max-[375px]:text-[9px] hover:bg-emerald-300 hover:text-black hover:transition-all duration-500"
+                containerStyles="flex gap-2 sm:gap-6 max-[344px]:gap-[2px]"
+                iconstyles="w-6 h-6 sm:w-9 sm:h-9 max-[344px]:w-5 max-[344px]:h-5 border border-emerald-300 rounded-full flex justify-center items-center text-emerald-300 text-[10px] sm:text-base max-[344px]:text-[9px] hover:bg-emerald-300 hover:text-black hover:transition-all duration-500"
               />
             </div>
           </div>
         </div>
 
         {/* Photo Section */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[375px]:scale-[0.5] min-[400px]:scale-[1.2] min-[400px]:top-30">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[344px]:scale-[0.5] min-[400px]:scale-[1.2] min-[400px]:top-30 min-[360px]:top-8">
           <Photo />
         </div>
       </div>
