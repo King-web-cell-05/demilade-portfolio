@@ -1,6 +1,7 @@
 "use client";
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -33,8 +34,6 @@ const services = [
   },
 ];
 
-import { motion } from "framer-motion";
-
 const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -47,24 +46,44 @@ const Services = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
-          {services.map((service, index) => {
-            return (
-              <div key={index} className="">
-               <div>
-                <div>{service.num}</div>
-                <Link href={service.href} className="">
-                <BsArrowDownRight/>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center gap-6 group cursor-pointer"
+            >
+              {/* top */}
+              <div className="w-full flex items-center justify-between">
+                {/* number */}
+                <div className="text-5xl font-extrabold text-outline text-transparent transition-all duration-500">
+                  {service.num}
+                </div>
+
+                {/* arrow */}
+                <Link
+                  href={service.href}
+                  className="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center
+                  transition-all duration-500 
+                  group-hover:bg-[#00ff99] hover:-rotate-45"
+                >
+                  <BsArrowDownRight
+                    className="text-black text-3xl transition-transform duration-500 
+                    hover:translate-x-1 hover:-translate-y-1"
+                  />
                 </Link>
-               </div>
-               {/* title */}
-               <h2>{service.title}</h2>
-                {/* description */}
-                <p>{service.description}</p>
-                {/* border */}
-                <div className="border-b border-white/20 w-full"></div>
               </div>
-            );
-          })}
+
+              {/* title */}
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-[#00ff99] transition-all duration-500">{service.title}</h2>
+
+              {/* description */}
+              <p className="text-white/70 leading-relaxed max-w-[480px]">
+                {service.description}
+              </p>
+
+              {/* border */}
+              <div className="border-b border-white/20 w-full"></div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

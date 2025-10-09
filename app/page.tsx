@@ -6,7 +6,7 @@ import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <section className="h-screen relative flex items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-hidden">
+    <section className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-visible">
       <div className="container mx-auto h-full flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-between gap-2 sm:gap-12 xl:gap-15 relative">
         {/* Text Section */}
         <div className="text-center xl:text-left order-2 xl:order-none relative z-10 px-2 sm:px-0">
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
 
         {/* Photo Section */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[344px]:scale-[0.5] min-[400px]:scale-[1.2] min-[400px]:top-30 min-[360px]:top-8">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[344px]:scale-[0.5] min-[400px]:scale-[1.2] min-[400px]:-top-36 min-[344px]:-top-35">
           <Photo />
         </div>
       </div>

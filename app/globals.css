@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%; /* make body take full height */
-  overflow: hidden; /* prevent scrolling */
+  overflow-y: auto; /* prevent scrolling */
   font-family: var(--font-jetbrains), monospace; /* or Poppins */
   background-color: #000;
   color: #fff;
@@ -99,4 +99,14 @@ body {
   .stats {
     gap: 6px; /* tighten spacing */
   }
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  transition: -webkit-text-stroke 0.3s ease;
+}
+
+.group:hover .text-outline {
+  -webkit-text-stroke: 1px #00ff99;
 }
