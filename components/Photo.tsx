@@ -60,7 +60,6 @@ const Photo = () => {
             src="/my-pic.png"
             alt="Photo"
             priority
-            quality={100}
             fill
             className="object-contain"
           />
