@@ -39,8 +39,8 @@ const Mobilenav = () => {
         <SheetContent className="flex flex-col ">
           <div className="mt-32 mb-40 text-center text-2xl">
             <Link href="/">
-              <h1 className="text-4xl text-white font-semibold">
-                King<span className="text-emerald-300">.</span>
+              <h1 className="text-4xl text-white font-semibold ">
+                Kingsley<span className="text-emerald-300">.</span>
               </h1>
             </Link>
           </div>
