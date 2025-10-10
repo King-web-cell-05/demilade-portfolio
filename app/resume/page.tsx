@@ -160,44 +160,47 @@ const Resume = () => {
     >
 <Tabs
   defaultValue="experience"
-  className="flex flex-col xl:flex-row gap-[60px]"
+  className="flex flex-col xl:flex-row gap-[60px] mb-30 xl:-ml-220"
 >
-  <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+   <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
     <TabsTrigger
       value="experience"
-      className="bg-white text-black rounded-lg py-3 font-semibold shadow-md hover:bg-gray-100 transition"
+      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
     >
       Experience
     </TabsTrigger>
 
     <TabsTrigger
       value="education"
-      className="bg-white text-black rounded-lg py-3 font-semibold shadow-md hover:bg-gray-100 transition"
+      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
     >
       Education
     </TabsTrigger>
 
     <TabsTrigger
       value="skills"
-      className="bg-white text-black rounded-lg py-3 font-semibold shadow-md hover:bg-gray-100 transition"
+      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
     >
       Skills
     </TabsTrigger>
 
     <TabsTrigger
       value="about"
-      className="bg-white text-black rounded-lg py-3 font-semibold shadow-md hover:bg-gray-100 transition"
+      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
     >
       About Me
     </TabsTrigger>
   </TabsList>
 
-  <div className="min-h-[70vh] w-full">
-    <TabsContent value="experience" className="w-full"></TabsContent>
-    <TabsContent value="education" className="w-full"></TabsContent>
-    <TabsContent value="skills" className="w-full"></TabsContent>
-    <TabsContent value="about" className="w-full"></TabsContent>
-  </div>
+  
+    <div className="relative w-full">
+      <TabsContent
+        value="experience"
+        className="absolute inset-0 data-[state=inactive]:hidden"
+      >
+        experience
+      </TabsContent>
+    </div>
 </Tabs>
 
     </motion.div>
