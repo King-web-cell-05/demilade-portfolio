@@ -160,45 +160,81 @@ const Resume = () => {
     >
 <Tabs
   defaultValue="experience"
-  className="flex flex-col xl:flex-row gap-[60px] mb-30 xl:-ml-220"
+  className="flex flex-col xl:flex-row gap-[60px] mb-55 xl:-ml-200 md:gap-[120px]"
 >
+
    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-    <TabsTrigger
-      value="experience"
-      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
-    >
-      Experience
-    </TabsTrigger>
+  <TabsTrigger
+    value="experience"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-7 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170 lg:mt-55"
+  >
+    Experience
+  </TabsTrigger>
 
-    <TabsTrigger
-      value="education"
-      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
-    >
-      Education
-    </TabsTrigger>
+  <TabsTrigger
+    value="education"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-5 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170"
+  >
+    Education
+  </TabsTrigger>
 
-    <TabsTrigger
-      value="skills"
-      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
-    >
-      Skills
-    </TabsTrigger>
+  <TabsTrigger
+    value="skills"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-5 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170"
+  >
+    Skills
+  </TabsTrigger>
 
-    <TabsTrigger
-      value="about"
-      className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto"
-    >
-      About Me
-    </TabsTrigger>
-  </TabsList>
+  <TabsTrigger
+    value="about"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-5 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170"
+  >
+    About Me
+  </TabsTrigger>
+</TabsList>
+
 
   
-    <div className="relative w-full">
+      {/* experience */}
+<div className="relative ">
+  {/* experience */}
+  <TabsContent
+    value="experience"
+    className=" absolute inset-0 data-[state=inactive]:hidden"
+  >
+<div className="flex flex-col gap-[30px] text-center xl:text-left mt-16 sm:mt-0 lg:ml-150">
+  <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
+    {experience.title}
+  </h3>
+  <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px]">
+    {experience.description}
+  </p>
+</div>
+
+  </TabsContent>
+
+
+      {/* education */}
       <TabsContent
-        value="experience"
+        value="education"
+        className="absolute inset-0 data-[state=inactive]:hidden "
+      >
+        education
+      </TabsContent>
+
+      {/* experience */}
+      <TabsContent
+        value="skills"
         className="absolute inset-0 data-[state=inactive]:hidden"
       >
-        experience
+        Skills
+      </TabsContent>
+      {/* experience */}
+      <TabsContent
+        value="about"
+        className="absolute inset-0 data-[state=inactive]:hidden"
+      >
+        about 
       </TabsContent>
     </div>
 </Tabs>
