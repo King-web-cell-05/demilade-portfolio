@@ -79,7 +79,7 @@ const education = {
   icons: "/assets/resume/cap.svg",
   title: " My Education",
   description:
-    "Over the past 3 years, I have worked on various projects ranging from small business websites to complex web applications. My expertise includes front-end and back-end development, UI/UX design, and database management.",
+    "Digital problem-solver with skills in software development,UI/UX, graphic design, delivering end-to-end solutions.",
   items: [
     {
       institution: "Yaba-tech",
@@ -160,34 +160,34 @@ const Resume = () => {
     >
 <Tabs
   defaultValue="experience"
-  className="flex flex-col xl:flex-row gap-[60px] mb-55 xl:-ml-200 md:gap-[120px]"
+  className="flex flex-col xl:flex-row items-start justify-start gap-8 md:gap-20 "
 >
 
-   <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+   <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
   <TabsTrigger
     value="experience"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-7 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170 lg:mt-55"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
   >
     Experience
   </TabsTrigger>
 
   <TabsTrigger
     value="education"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-5 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
   >
     Education
   </TabsTrigger>
 
   <TabsTrigger
     value="skills"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-5 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
   >
     Skills
   </TabsTrigger>
 
   <TabsTrigger
     value="about"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-5 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px] lg:ml-170"
+    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
   >
     About Me
   </TabsTrigger>
@@ -195,48 +195,62 @@ const Resume = () => {
 
 
   
-      {/* experience */}
-<div className="relative ">
+<div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25">
   {/* experience */}
   <TabsContent
     value="experience"
-    className=" absolute inset-0 data-[state=inactive]:hidden"
+    className="absolute inset-0 data-[state=inactive]:hidden"
   >
-<div className="flex flex-col gap-[30px] text-center xl:text-left mt-16 sm:mt-0 lg:ml-150">
-  <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
-    {experience.title}
-  </h3>
-  <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px]">
-    {experience.description}
-  </p>
-</div>
-
+    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-110">
+      <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
+        {experience.title}
+      </h3>
+      <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
+        {experience.description}
+      </p>
+    </div>
   </TabsContent>
 
-
-      {/* education */}
-      <TabsContent
-        value="education"
-        className="absolute inset-0 data-[state=inactive]:hidden "
-      >
-        education
-      </TabsContent>
-
-      {/* experience */}
-      <TabsContent
-        value="skills"
-        className="absolute inset-0 data-[state=inactive]:hidden"
-      >
-        Skills
-      </TabsContent>
-      {/* experience */}
-      <TabsContent
-        value="about"
-        className="absolute inset-0 data-[state=inactive]:hidden"
-      >
-        about 
-      </TabsContent>
+  {/* education */}
+  <TabsContent
+    value="education"
+    className="absolute inset-0 data-[state=inactive]:hidden"
+  >
+    <div className="px-4 lg:ml-110 mt-16">
+      <h3 className="text-xl font-bold mb-4">My Education</h3>
+      <p className="text-white/60 leading-relaxed max-w-[700px]">
+        {education.description}
+      </p>
     </div>
+  </TabsContent>
+
+  {/* skills */}
+  <TabsContent
+    value="skills"
+    className="absolute inset-0 data-[state=inactive]:hidden"
+  >
+    <div className="px-4 lg:ml-110 mt-16">
+      <h3 className="text-xl font-bold mb-4">My Skills</h3>
+      <p className="text-white/60 leading-relaxed max-w-[700px]">
+        {skills.description}
+      </p>
+    </div>
+  </TabsContent>
+
+  {/* about */}
+  <TabsContent
+    value="about"
+    className="absolute inset-0 data-[state=inactive]:hidden"
+  >
+    <div className="px-4 lg:ml-110 mt-16">
+      <h3 className="text-xl font-bold mb-4">About Me</h3>
+      <p className="text-white/60 leading-relaxed max-w-[700px]">
+        {about.description}
+      </p>
+    </div>
+  </TabsContent>
+</div>
+
 </Tabs>
 
     </motion.div>
