@@ -59,11 +59,16 @@ const experience = {
     {
       company: "Global-tech",
       position: "Graphic designer",
-      duration: "Summer 2023",
+      duration: "2023 - 2024",
+    },
+     {
+      company: "Freelance",
+      position: "Full Stack developer",
+      duration: "2025 - present",
     },
     {
       company: "E-commerce site",
-      position: "Freelance Web Developer",
+      position: "Front-end-Developer",
       duration: "2025",
     },
     {
@@ -160,7 +165,7 @@ const Resume = () => {
     >
 <Tabs
   defaultValue="experience"
-  className="flex flex-col xl:flex-row items-start justify-start gap-8 md:gap-20 "
+  className="flex flex-col xl:flex-row items-start justify-start gap-4 md:gap-2 "
 >
 
    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
@@ -195,19 +200,34 @@ const Resume = () => {
 
 
   
-<div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25">
+<div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[340px]:top-45 min-[768px]:top-60 min-[1280px]:top-1">
   {/* experience */}
   <TabsContent
     value="experience"
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
-    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-110">
+    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
       <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
         {experience.title}
       </h3>
       <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
         {experience.description}
       </p>
+      <ScrollArea className="h-[400px]">  
+        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          {experience.items.map((item, index)=> {
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+              <span>{item.duration}</span>
+              <h3>{item.position}</h3>
+              <div>
+                {/* dot */}
+                <span></span>
+                <p>{item.company}</p>
+              </div>
+            </li>
+          })}
+        </ul>
+      </ScrollArea>
     </div>
   </TabsContent>
 
@@ -216,7 +236,7 @@ const Resume = () => {
     value="education"
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
-    <div className="px-4 lg:ml-110 mt-16">
+    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
       <h3 className="text-xl font-bold mb-4">My Education</h3>
       <p className="text-white/60 leading-relaxed max-w-[700px]">
         {education.description}
@@ -229,7 +249,7 @@ const Resume = () => {
     value="skills"
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
-    <div className="px-4 lg:ml-110 mt-16">
+    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
       <h3 className="text-xl font-bold mb-4">My Skills</h3>
       <p className="text-white/60 leading-relaxed max-w-[700px]">
         {skills.description}
@@ -242,7 +262,7 @@ const Resume = () => {
     value="about"
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
-    <div className="px-4 lg:ml-110 mt-16">
+    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
       <h3 className="text-xl font-bold mb-4">About Me</h3>
       <p className="text-white/60 leading-relaxed max-w-[700px]">
         {about.description}
