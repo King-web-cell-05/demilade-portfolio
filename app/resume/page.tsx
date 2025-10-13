@@ -103,6 +103,11 @@ const education = {
       degree: "Desktop Publishing certificate",
       duration: "2023",
     },
+       {
+      institution: "New Ocean",
+      degree: "WAEC",
+      duration: "2024",
+    },
   ],
 };
 // skills data
@@ -135,8 +140,16 @@ const skills = {
       name: "Next.js",
     },
     {
-      icon: <FaHtml5 />,
-      name: "HTML5",
+      icon: <SiTailwindcss />,
+      name: "tailwind.css",
+    },
+       {
+      icon: <FaNodeJs />,
+      name: "tailwind.css",
+    },
+       {
+      icon: <FaFigma/>,
+      name: "figma",
     },
   ],
 };
@@ -165,8 +178,9 @@ const Resume = () => {
     >
 <Tabs
   defaultValue="experience"
-  className="flex flex-col xl:flex-row items-start justify-start gap-4 md:gap-2 "
+  className="flex flex-col xl:flex-row items-start justify-between gap-6 md:gap-10 lg:gap-8 w-full"
 >
+
 
    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
   <TabsTrigger
@@ -216,13 +230,13 @@ const Resume = () => {
       <ScrollArea className="h-[400px]">  
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
           {experience.items.map((item, index)=> {
-            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-              <span>{item.duration}</span>
-              <h3>{item.position}</h3>
-              <div>
+            return <li key={index} className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+              <span className="text-emerald-300">{item.duration}</span>
+              <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+              <div className="flex items-center gap-3">
                 {/* dot */}
-                <span></span>
-                <p>{item.company}</p>
+                <span className="w-[6px] h-[6px] rounded full bg-emerald-300"></span>
+                <p className="text-white/60">{item.company}</p>
               </div>
             </li>
           })}
@@ -237,10 +251,27 @@ const Resume = () => {
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
     <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
-      <h3 className="text-xl font-bold mb-4">My Education</h3>
-      <p className="text-white/60 leading-relaxed max-w-[700px]">
+           <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
+        {education.title}
+      </h3>
+      <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
         {education.description}
       </p>
+      <ScrollArea className="h-[400px]">  
+        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          {education.items.map((item, index)=> {
+            return <li key={index} className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+              <span className="text-emerald-300">{item.duration}</span>
+              <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+              <div className="flex items-center gap-3">
+                {/* dot */}
+                <span className="w-[6px] h-[6px] rounded full bg-emerald-300"></span>
+                <p className="text-white/60">{item.institution}</p>
+              </div>
+            </li>
+          })}
+        </ul>
+      </ScrollArea>
     </div>
   </TabsContent>
 
@@ -250,10 +281,17 @@ const Resume = () => {
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
     <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
-      <h3 className="text-xl font-bold mb-4">My Skills</h3>
+     <div>
+       <h3 className="text-xl font-bold mb-4">My Skills</h3>
       <p className="text-white/60 leading-relaxed max-w-[700px]">
         {skills.description}
       </p>
+     </div>
+     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+      {skills.skillList.map ((skill, index)=>{
+        return <li key={index}>{skill.name}</li>
+      })}
+     </ul>
     </div>
   </TabsContent>
 
