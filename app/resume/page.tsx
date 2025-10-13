@@ -145,7 +145,7 @@ const skills = {
     },
        {
       icon: <FaNodeJs />,
-      name: "tailwind.css",
+      name: "Node.js",
     },
        {
       icon: <FaFigma/>,
@@ -214,7 +214,7 @@ const Resume = () => {
 
 
   
-<div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[340px]:top-45 min-[768px]:top-60 min-[1280px]:top-1">
+<div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[340px]:top-45 min-[640px]:top-60 min-[1280px]:top-1 min-[640px]:bottom-3">
   {/* experience */}
   <TabsContent
     value="experience"
@@ -280,18 +280,40 @@ const Resume = () => {
     value="skills"
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
-    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
+    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-30">
      <div>
        <h3 className="text-xl font-bold mb-4">My Skills</h3>
-      <p className="text-white/60 leading-relaxed max-w-[700px]">
+      <p className="text-white/60 leading-relaxed max-w-[700px] mb-5">
         {skills.description}
       </p>
      </div>
-     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
-      {skills.skillList.map ((skill, index)=>{
-        return <li key={index}>{skill.name}</li>
-      })}
-     </ul>
+ <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 xl:gap-[45px]">
+  {skills.skillList.map((skill, index) => (
+    <li key={index}>
+      <TooltipProvider delayDuration={100}>
+        <Tooltip>
+          <TooltipTrigger
+            className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] bg-[#232329] 
+                       rounded-xl flex items-center justify-center 
+                       group hover:bg-[#2b2b31] transition-all duration-300 mx-auto"
+          >
+            <div className="text-5xl text-white group-hover:text-emerald-300 transition-all duration-300">
+              {skill.icon}
+            </div>
+          </TooltipTrigger>
+
+          <TooltipContent
+            className="bg-white text-black font-medium px-3 py-1 rounded-md shadow-md"
+          >
+            <p className="capitalize text-sm">{skill.name}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </li>
+  ))}
+</ul>
+
+
     </div>
   </TabsContent>
 
@@ -301,10 +323,8 @@ const Resume = () => {
     className="absolute inset-0 data-[state=inactive]:hidden"
   >
     <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
-      <h3 className="text-xl font-bold mb-4">About Me</h3>
-      <p className="text-white/60 leading-relaxed max-w-[700px]">
-        {about.description}
-      </p>
+     <h3>{about.title}</h3>
+     <p>{about.description}</p>
     </div>
   </TabsContent>
 </div>
