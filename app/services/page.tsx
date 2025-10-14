@@ -67,7 +67,7 @@ const Services = () => {
                 >
                   <BsArrowDownRight
                     className="text-black text-3xl transition-transform duration-500 
-                    hover:translate-x-1 hover:-translate-y-1"
+                    hover:translate-x-1 hover:-translate-y-1 "
                   />
                 </Link>
               </div>
