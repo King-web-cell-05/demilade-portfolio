@@ -20,86 +20,97 @@ import Image from "next/image";
 
 
 const projects = [
-  {
+    {
     num: "01",
     category: "Front-end",
-    title: "Login design",
+    title: "Profile-card design",
     description:
-      "A modern and minimalist login design, focusing on clean typography and a visually appealing layout ",
+      "A profile card is a UI element that displays a user's information in a concise and visually appealing manner. ",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/public/assets/login-page.jpg",
-    live: "https://king-web-cell-05.github.io/login-design/",
+    image: "/assets/assets/work-images/profile-card-pic.png", 
+    live: "https://king-web-cell-05.github.io/profile-card-design/",
     github: "",
   },
   {
     num: "02",
     category: "Front-end",
-    title: "Todo App",
+    title: "Login design",
     description:
-      "A clean, intuitive todo app that helps you stay organised and focused. Create, manage and prioritize your tasks with ease ",
+      "A modern and minimalist login design, focusing on clean typography and a visually appealing layout ",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/public/assets/todo-app.jpg",
-    live: " https://king-web-cell-05.github.io/todo-app/",
+    image: "/assets/assets/work-images/login-page.jpg", 
+    live: "https://king-web-cell-05.github.io/login-design/",
     github: "",
   },
   {
     num: "03",
     category: "Front-end",
-    title: "Weather App",
+    title: "Todo App",
     description:
-      "A dynamic weather application that provides real-time weather updates and forecasts,this app utilizes APIs to fetch weather data ",
+      "A clean, intuitive todo app that helps you stay organised and focused.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/public/assets/weather-apc.jpg",
-    live: " https://king-web-cell-05.github.io/weather-Apc/",
+    image: "/assets/assets/work-images/todo-app.jpg", 
+    live: "https://king-web-cell-05.github.io/todo-app/",
     github: "",
   },
-
   {
     num: "04",
-    category: "Front-end Framework",
-    title: "Quiz App",
+    category: "Front-end",
+    title: "Weather App",
     description:
-      "An interactive quiz application that test users' knowledge on React, this app provides an engaging way to learn and challenge oneself",
-    stack: [
-      { name: "React" },
-      { name: "Tailwind.css" },
-      { name: "Javascript" },
-    ],
-    image: "/public/assets/quiz-app.png",
-    live: "https://quiz-app-rho-ebon.vercel.app",
+      "A dynamic weather application that provides real-time weather updates.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/assets/work-images/weather-apc.jpg", 
+    live: "https://king-web-cell-05.github.io/weather-Apc/",
     github: "",
   },
   {
     num: "05",
     category: "Front-end Framework",
-    title: "Weather App",
+    title: "Quiz App",
     description:
-      "A comprehensive real estate application that enables users to browse and search for properties and streamline their home search",
+      "An interactive quiz application that tests users' knowledge on React.",
     stack: [
       { name: "React" },
       { name: "Tailwind.css" },
       { name: "Javascript" },
     ],
-    image: "/public/assets/real-estate-pic.jpg",
-    live: " https://realestate-alpha-eight.vercel.app",
+    image: "/assets/assets/work-images/quiz-app.png", 
+    live: "https://quiz-app-rho-ebon.vercel.app",
     github: "",
   },
   {
     num: "06",
     category: "Front-end Framework",
-    title: "Mini Portfolio",
+    title: "Real Estate App",
     description:
-      "Showcasing my skills and projects in web development, data analysis, and more through my mini portfolio",
+      "A comprehensive real estate application that enables users to browse and search for properties.",
     stack: [
       { name: "React" },
       { name: "Tailwind.css" },
       { name: "Javascript" },
     ],
-    image: "/public/assets/king-portfolio.jpg",
+    image: "/assets/assets/work-images/real-estate-pic.jpg", 
+    live: "https://realestate-alpha-eight.vercel.app",
+    github: "",
+  },
+  {
+    num: "07",
+    category: "Front-end Framework",
+    title: "Mini Portfolio",
+    description:
+      "Showcasing my skills and projects through my mini portfolio.",
+    stack: [
+      { name: "React" },
+      { name: "Tailwind.css" },
+      { name: "Javascript" },
+    ],
+    image: "/assets/assets/work-images/king-portfolio.jpg", 
     live: "https://king-portfolio-nu.vercel.app/",
     github: "",
   },
 ];
+
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -186,8 +197,17 @@ const handleSlideChange = (swiper: SwiperType) => {
             onSlideChange={handleSlideChange}
             >
               {projects.map ((project, index) => {
-                return <SwiperSlide key={index}>
-                  slide
+                return <SwiperSlide key={index} className="w-full">
+                  <div className="h-[468px] relative group flex justify-center items-center bg-pink-50/20">
+                  {/* overlay */}
+                  <div>
+
+                  </div>
+                  {/* image */}
+                  <div className="relative w-full h-full">
+                    <Image src={project.image} fill alt="project-image" className="object-cover"/>
+                  </div>
+                  </div>
                 </SwiperSlide>
               })}
             </Swiper>
