@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import WorkSliderBtns from "@/components/WorkSliderBtns"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";  
@@ -123,7 +124,8 @@ const handleSlideChange = (swiper: SwiperType) => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition:{delay:1, duration:0.4, ease:"easeIn"},
+     }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -198,18 +200,23 @@ const handleSlideChange = (swiper: SwiperType) => {
             >
               {projects.map ((project, index) => {
                 return <SwiperSlide key={index} className="w-full">
-                  <div className="h-[468px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[468px] relative group flex justify-center items-center bg-pink-50/20 max-[700px]:scale-[0.95] ">
                   {/* overlay */}
                   <div>
 
                   </div>
                   {/* image */}
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full max-[700px]:scale-[1] ">
                     <Image src={project.image} fill alt="project-image" className="object-cover"/>
                   </div>
                   </div>
                 </SwiperSlide>
               })}
+              {/* slider buttons */}
+              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+              btnStyles="bg-emerald-300 hover:bg-emerald-300-hover text-black text[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              
+              />
             </Swiper>
           </div>
         </div>
