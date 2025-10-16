@@ -30,7 +30,7 @@ const projects = [
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/assets/work-images/profile-card-pic.png", 
     live: "https://king-web-cell-05.github.io/profile-card-design/",
-    github: "",
+    github: "https://github.com/King-web-cell-05/profile-card-design",
   },
   {
     num: "02",
@@ -41,7 +41,7 @@ const projects = [
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/assets/work-images/login-page.jpg", 
     live: "https://king-web-cell-05.github.io/login-design/",
-    github: "",
+    github: "https://github.com/King-web-cell-05/login-design",
   },
   {
     num: "03",
@@ -52,7 +52,7 @@ const projects = [
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/assets/work-images/todo-app.jpg", 
     live: "https://king-web-cell-05.github.io/todo-app/",
-    github: "",
+    github: "https://github.com/King-web-cell-05/todo-app",
   },
   {
     num: "04",
@@ -63,7 +63,7 @@ const projects = [
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/assets/work-images/weather-apc.jpg", 
     live: "https://king-web-cell-05.github.io/weather-Apc/",
-    github: "",
+    github: "https://github.com/King-web-cell-05/weather-Apc",
   },
   {
     num: "05",
@@ -78,7 +78,7 @@ const projects = [
     ],
     image: "/assets/assets/work-images/quiz-app.png", 
     live: "https://quiz-app-rho-ebon.vercel.app",
-    github: "",
+    github: "https://github.com/King-web-cell-05/quiz-app",
   },
   {
     num: "06",
@@ -93,7 +93,7 @@ const projects = [
     ],
     image: "/assets/assets/work-images/real-estate-pic.jpg", 
     live: "https://realestate-alpha-eight.vercel.app",
-    github: "",
+    github: "https://github.com/King-web-cell-05/realestate",
   },
   {
     num: "07",
@@ -108,7 +108,7 @@ const projects = [
     ],
     image: "/assets/assets/work-images/king-portfolio.jpg", 
     live: "https://king-portfolio-nu.vercel.app/",
-    github: "",
+    github: "https://github.com/King-web-cell-05/kingsley-portfolio",
   },
 ];
 

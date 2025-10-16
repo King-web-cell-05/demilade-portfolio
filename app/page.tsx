@@ -35,9 +35,18 @@ const Home = () => {
             </Button>
             <div className="mb-2 sm:mb-6 xl:mb-0">
               <Socials
-                containerStyles="flex gap-2 sm:gap-6 max-[344px]:gap-[2px]"
-                iconstyles="w-6 h-6 sm:w-9 sm:h-9 max-[344px]:w-5 max-[344px]:h-5 border border-emerald-300 rounded-full flex justify-center items-center text-emerald-300 text-[10px] sm:text-base max-[344px]:text-[9px] hover:bg-emerald-300 hover:text-black hover:transition-all duration-500"
-              />
+  containerStyles="flex gap-3 sm:gap-6 max-[344px]:gap-[4px]"
+  iconstyles="
+    w-10 h-10 sm:w-12 sm:h-12 
+    max-[344px]:w-8 max-[344px]:h-8
+    border border-emerald-300 
+    rounded-full flex justify-center items-center 
+    text-emerald-300 
+    text-[16px] sm:text-[20px] max-[344px]:text-[12px]
+    hover:bg-emerald-300 hover:text-black 
+    transition-all duration-500 sm:top-30"
+/>
+
             </div>
           </div>
         </div>
