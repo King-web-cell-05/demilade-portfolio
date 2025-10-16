@@ -20,7 +20,7 @@ const Stats = () => {
                 className="text-2xl sm:text-2xl md:text-4xl xl:text-6xl font-extrabold text-emerald-300
                 max-[344px]:text-[8px]"
               >
-                <CountUp end={item.num} duration={5} delay={0.5} />
+                <CountUp end={item.num} duration={3} delay={0.1} />
               </h3>
               <p
                 className="mt-1 text-xs sm:text-sm md:text-base xl:text-lg text-gray-300

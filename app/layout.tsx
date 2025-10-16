@@ -17,7 +17,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: 'King Portfolio',
-  description: 'Using Next.js fonts',
+  description: 'Full-stack developer portfolio showcasing modern web design and interactive projects',
 }
 
 import { ReactNode } from 'react';
