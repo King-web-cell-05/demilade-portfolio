@@ -92,7 +92,7 @@ const education = {
   items: [
     {
       institution: "Yaba-tech",
-      degree: "HND",
+      degree: "OND",
       duration: " 2025",
     },
 
