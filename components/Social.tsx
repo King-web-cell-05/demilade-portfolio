@@ -7,7 +7,10 @@ const socials = [
     icon: <FaLinkedinIn />,
     path: "https://www.linkedin.com/in/dada-kingsley-a0858637a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
-  { icon: <FaTwitter />, path: "https://x.com/codekingz05?t=9O_LxxKQkQT5DRWOxohwvw&s=08" },
+  {
+    icon: <FaTwitter />,
+    path: "https://x.com/codekingz05?t=9O_LxxKQkQT5DRWOxohwvw&s=08",
+  },
 ];
 
 import React from "react";

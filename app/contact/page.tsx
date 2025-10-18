@@ -53,29 +53,32 @@ const Contact = () => {
     return `Hello Kingsley 👋,\n\nMy name is ${fullName}.\n\n📧 Email: ${email}\n📱 Phone: ${phone}\n💼 Service: ${service}\n\n📝 Message:\n${message}`;
   };
 
-  const sendViaWhatsApp = () => {
-    setIsSendingWhatsApp(true);
-    const text = encodeURIComponent(createMessage());
-    const phoneNumber = "+2349065644691";
-    const url = `https://wa.me/${phoneNumber}?text=${text}`;
-    setTimeout(() => {
-      window.open(url, "_blank");
-      setIsSendingWhatsApp(false);
-    }, 1000);
-  };
+const sendViaWhatsApp = () => {
+  const text = encodeURIComponent(createMessage());
+  const phoneNumber = "+2349065644691";
+  const url = `https://wa.me/${phoneNumber}?text=${text}`;
 
-  const sendViaEmail = () => {
-    setIsSendingEmail(true);
-    const subject = encodeURIComponent(
-      `New Contact: ${formData.service || "General Inquiry"}`
-    );
-    const body = encodeURIComponent(createMessage());
-    const url = `mailto:kingsleydada159@gmail.com?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      window.open(url, "_blank");
-      setIsSendingEmail(false);
-    }, 1000);
-  };
+  
+  window.open(url, "_blank");
+
+  
+  setIsSendingWhatsApp(true);
+  setTimeout(() => setIsSendingWhatsApp(false), 1500);
+};
+
+const sendViaEmail = () => {
+  const subject = encodeURIComponent(`New Contact: ${formData.service || "General Inquiry"}`);
+  const body = encodeURIComponent(createMessage());
+  const url = `mailto:kingsleydada159@gmail.com?subject=${subject}&body=${body}`;
+
+  
+  window.location.href = url; 
+
+  
+  setIsSendingEmail(true);
+  setTimeout(() => setIsSendingEmail(false), 1500);
+};
+
 
   return (
     <motion.section
