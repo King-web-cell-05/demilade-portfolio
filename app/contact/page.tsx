@@ -53,32 +53,29 @@ const Contact = () => {
     return `Hello Kingsley 👋,\n\nMy name is ${fullName}.\n\n📧 Email: ${email}\n📱 Phone: ${phone}\n💼 Service: ${service}\n\n📝 Message:\n${message}`;
   };
 
-const sendViaWhatsApp = () => {
-  const text = encodeURIComponent(createMessage());
-  const phoneNumber = "+2349065644691";
-  const url = `https://wa.me/${phoneNumber}?text=${text}`;
+  const sendViaWhatsApp = () => {
+    const text = encodeURIComponent(createMessage());
+    const phoneNumber = "+2349065644691";
+    const url = `https://wa.me/${phoneNumber}?text=${text}`;
 
-  
-  window.open(url, "_blank");
+    window.open(url, "_blank");
 
-  
-  setIsSendingWhatsApp(true);
-  setTimeout(() => setIsSendingWhatsApp(false), 1500);
-};
+    setIsSendingWhatsApp(true);
+    setTimeout(() => setIsSendingWhatsApp(false), 1500);
+  };
 
-const sendViaEmail = () => {
-  const subject = encodeURIComponent(`New Contact: ${formData.service || "General Inquiry"}`);
-  const body = encodeURIComponent(createMessage());
-  const url = `mailto:kingsleydada159@gmail.com?subject=${subject}&body=${body}`;
+  const sendViaEmail = () => {
+    const subject = encodeURIComponent(
+      `New Contact: ${formData.service || "General Inquiry"}`
+    );
+    const body = encodeURIComponent(createMessage());
+    const url = `mailto:kingsleydada159@gmail.com?subject=${subject}&body=${body}`;
 
-  
-  window.location.href = url; 
+    window.location.href = url;
 
-  
-  setIsSendingEmail(true);
-  setTimeout(() => setIsSendingEmail(false), 1500);
-};
-
+    setIsSendingEmail(true);
+    setTimeout(() => setIsSendingEmail(false), 1500);
+  };
 
   return (
     <motion.section
@@ -163,7 +160,8 @@ const sendViaEmail = () => {
               />
 
               {/* buttons */}
-              <div className="flex flex-wrap gap-4">
+              {/* buttons */}
+              <div className="flex flex-wrap gap-4 max-[768px]:justify-center">
                 <Button
                   type="button"
                   size="sm"
@@ -171,7 +169,9 @@ const sendViaEmail = () => {
                   disabled={isSendingWhatsApp}
                   className="bg-emerald-500 hover:bg-emerald-600 text-white"
                 >
-                  {isSendingWhatsApp ? "Sending..." : "Send via WhatsApp"}
+                  {isSendingWhatsApp
+                    ? "Preparing message..."
+                    : "Send via WhatsApp"}
                 </Button>
 
                 <Button
@@ -181,7 +181,7 @@ const sendViaEmail = () => {
                   disabled={isSendingEmail}
                   className="bg-white/10 hover:bg-white/20 text-white"
                 >
-                  {isSendingEmail ? "Sending..." : "Send via Email"}
+                  {isSendingEmail ? "Preparing message..." : "Send via Email"}
                 </Button>
               </div>
             </form>

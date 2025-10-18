@@ -34,7 +34,7 @@ const about = {
       fieldName: "Twitter",
       fieldValue: "@codekingz05",
     },
-        {
+    {
       fieldName: "Nationality",
       fieldValue: "Nigerian",
     },
@@ -65,7 +65,7 @@ const experience = {
       position: "Graphic designer",
       duration: "2023 - 2024",
     },
-     {
+    {
       company: "Freelance",
       position: "Full Stack developer",
       duration: "2025 - present",
@@ -107,7 +107,7 @@ const education = {
       degree: "Desktop Publishing certificate",
       duration: "2023",
     },
-       {
+    {
       institution: "New Ocean",
       degree: "WAEC",
       duration: "2024",
@@ -147,12 +147,12 @@ const skills = {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
     },
-       {
+    {
       icon: <FaNodeJs />,
       name: "Node.js",
     },
-       {
-      icon: <FaFigma/>,
+    {
+      icon: <FaFigma />,
       name: "figma",
     },
   ],
@@ -180,170 +180,184 @@ const Resume = () => {
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
-<Tabs
-  defaultValue="experience"
-  className="flex flex-col xl:flex-row items-start justify-between gap-6 md:gap-10 lg:gap-8 w-full"
->
+      <Tabs
+        defaultValue="experience"
+        className="flex flex-col xl:flex-row items-start justify-between gap-6 md:gap-10 lg:gap-8 w-full"
+      >
+        <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
+          <TabsTrigger
+            value="experience"
+            className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
+          >
+            Experience
+          </TabsTrigger>
 
+          <TabsTrigger
+            value="education"
+            className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
+          >
+            Education
+          </TabsTrigger>
 
-   <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
-  <TabsTrigger
-    value="experience"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
-  >
-    Experience
-  </TabsTrigger>
+          <TabsTrigger
+            value="skills"
+            className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
+          >
+            Skills
+          </TabsTrigger>
 
-  <TabsTrigger
-    value="education"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
-  >
-    Education
-  </TabsTrigger>
+          <TabsTrigger
+            value="about"
+            className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
+          >
+            About Me
+          </TabsTrigger>
+        </TabsList>
 
-  <TabsTrigger
-    value="skills"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
-  >
-    Skills
-  </TabsTrigger>
+        <div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[340px]:top-45 min-[640px]:top-60 min-[1280px]:top-1 min-[640px]:bottom-3">
+          {/* experience */}
+          <TabsContent
+            value="experience"
+            className="absolute inset-0 data-[state=inactive]:hidden"
+          >
+            <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
+              <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
+                {experience.title}
+              </h3>
+              <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
+                {experience.description}
+              </p>
+              <ScrollArea className="h-[400px]">
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  {experience.items.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-emerald-300">
+                          {item.duration}
+                        </span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.position}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          {/* dot */}
+                          <span className="w-[6px] h-[6px] rounded full bg-emerald-300"></span>
+                          <p className="text-white/60">{item.company}</p>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </ScrollArea>
+            </div>
+          </TabsContent>
 
-  <TabsTrigger
-    value="about"
-    className="data-[state=active]:bg-emerald-300 data-[state=active]:text-black rounded-lg py-3 px-25 transition-all text-center w-[95%] mx-auto text-base sm:text-lg lg:text-[14px] xl:text-[13px]  "
-  >
-    About Me
-  </TabsTrigger>
-</TabsList>
+          {/* education */}
+          <TabsContent
+            value="education"
+            className="absolute inset-0 data-[state=inactive]:hidden"
+          >
+            <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
+              <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
+                {education.title}
+              </h3>
+              <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
+                {education.description}
+              </p>
+              <ScrollArea className="h-[400px]">
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  {education.items.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-emerald-300">
+                          {item.duration}
+                        </span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.degree}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          {/* dot */}
+                          <span className="w-[6px] h-[6px] rounded full bg-emerald-300"></span>
+                          <p className="text-white/60">{item.institution}</p>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </ScrollArea>
+            </div>
+          </TabsContent>
 
-
-  
-<div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[340px]:top-45 min-[640px]:top-60 min-[1280px]:top-1 min-[640px]:bottom-3">
-  {/* experience */}
-  <TabsContent
-    value="experience"
-    className="absolute inset-0 data-[state=inactive]:hidden"
-  >
-    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
-      <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
-        {experience.title}
-      </h3>
-      <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
-        {experience.description}
-      </p>
-      <ScrollArea className="h-[400px]">  
-        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-          {experience.items.map((item, index)=> {
-            return <li key={index} className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-              <span className="text-emerald-300">{item.duration}</span>
-              <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
-              <div className="flex items-center gap-3">
-                {/* dot */}
-                <span className="w-[6px] h-[6px] rounded full bg-emerald-300"></span>
-                <p className="text-white/60">{item.company}</p>
+          {/* skills */}
+          <TabsContent
+            value="skills"
+            className="absolute inset-0 data-[state=inactive]:hidden"
+          >
+            <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-30">
+              <div>
+                <h3 className="text-xl font-bold mb-4">My Skills</h3>
+                <p className="text-white/60 leading-relaxed max-w-[700px] mb-5">
+                  {skills.description}
+                </p>
               </div>
-            </li>
-          })}
-        </ul>
-      </ScrollArea>
-    </div>
-  </TabsContent>
-
-  {/* education */}
-  <TabsContent
-    value="education"
-    className="absolute inset-0 data-[state=inactive]:hidden"
-  >
-    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
-           <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-[18px] font-bold">
-        {education.title}
-      </h3>
-      <p className="text-white/60 mx-auto xl:mx-0 max-w-[90%] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] leading-relaxed text-base sm:text-lg lg:text-[15px] xl:text-[14px] break-words">
-        {education.description}
-      </p>
-      <ScrollArea className="h-[400px]">  
-        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-          {education.items.map((item, index)=> {
-            return <li key={index} className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-              <span className="text-emerald-300">{item.duration}</span>
-              <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
-              <div className="flex items-center gap-3">
-                {/* dot */}
-                <span className="w-[6px] h-[6px] rounded full bg-emerald-300"></span>
-                <p className="text-white/60">{item.institution}</p>
-              </div>
-            </li>
-          })}
-        </ul>
-      </ScrollArea>
-    </div>
-  </TabsContent>
-
-  {/* skills */}
-  <TabsContent
-    value="skills"
-    className="absolute inset-0 data-[state=inactive]:hidden"
-  >
-    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-30">
-     <div>
-       <h3 className="text-xl font-bold mb-4">My Skills</h3>
-      <p className="text-white/60 leading-relaxed max-w-[700px] mb-5">
-        {skills.description}
-      </p>
-     </div>
- <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 xl:gap-[45px]">
-  {skills.skillList.map((skill, index) => (
-    <li key={index}>
-      <TooltipProvider delayDuration={100}>
-        <Tooltip>
-          <TooltipTrigger
-            className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] bg-[#232329] 
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 xl:gap-[45px]">
+                {skills.skillList.map((skill, index) => (
+                  <li key={index}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger
+                          className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] bg-[#232329] 
                        rounded-xl flex items-center justify-center 
                        group hover:bg-[#2b2b31] transition-all duration-300 mx-auto"
-          >
-            <div className="text-5xl text-white group-hover:text-emerald-300 transition-all duration-300">
-              {skill.icon}
+                        >
+                          <div className="text-5xl text-white group-hover:text-emerald-300 transition-all duration-300">
+                            {skill.icon}
+                          </div>
+                        </TooltipTrigger>
+
+                        <TooltipContent className="bg-white text-black font-medium px-3 py-1 rounded-md shadow-md">
+                          <p className="capitalize text-sm">{skill.name}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </TooltipTrigger>
+          </TabsContent>
 
-          <TooltipContent
-            className="bg-white text-black font-medium px-3 py-1 rounded-md shadow-md"
+          {/* about */}
+          <TabsContent
+            value="about"
+            className="absolute inset-0 data-[state=inactive]:hidden"
           >
-            <p className="capitalize text-sm">{skill.name}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </li>
-  ))}
-</ul>
-
-
-    </div>
-  </TabsContent>
-
-  {/* about */}
-  <TabsContent
-    value="about"
-    className="absolute inset-0 data-[state=inactive]:hidden"
-  >
-    <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
-     <h3 className="text-4xl font-bold">{about.title}</h3>
-     <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-     <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-      {about.info.map((item,index)=> {
-        return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-          <span className=" text-white/60">{item.fieldName}</span>
-          <span className="text-xl">{item.fieldValue}</span>
-
-        </li>
-      })}
-     </ul>
-    </div>
-  </TabsContent>
-</div>
-
-</Tabs>
-
+            <div className="flex flex-col gap-[20px] text-center xl:text-left mt-16 sm:mt-0 px-4 lg:ml-15 lg:mb-8">
+              <h3 className="text-4xl font-bold">{about.title}</h3>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                {about.description}
+              </p>
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                {about.info.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="flex items-center justify-center xl:justify-start gap-4"
+                    >
+                      <span className=" text-white/60">{item.fieldName}</span>
+                      <span className="text-xl">{item.fieldValue}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </TabsContent>
+        </div>
+      </Tabs>
     </motion.div>
   );
 };
