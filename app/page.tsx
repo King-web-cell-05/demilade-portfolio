@@ -5,7 +5,8 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Services from "./services/page";
 import Resume from "./resume/page"
-
+import Work from "./work/page"
+import Contact from "./contact/page"
 const Home = () => {
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-visible max-[700px]:top-60 max-[1250px]:top-95">
@@ -67,11 +68,17 @@ const Home = () => {
       </div>
 
       {/* Services Section */}
-      <section className="w-full mt-20 sm:mt-28">
+      <section id="services" className="w-full mt-20 sm:mt-28">
         <Services />
       </section>
-       <section className="w-full mt-20 sm:mt-28">
+       <section id="resume" className="w-full mt-20 sm:mt-28">
         <Resume />
+      </section>
+       <section id="work" className="w-full mt-150 sm:mt-28">
+        <Work />
+      </section>
+        <section id="contact" className="w-full mt-150 sm:mt-28">
+        <Contact />
       </section>
 
 

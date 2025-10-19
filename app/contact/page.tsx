@@ -85,6 +85,25 @@ const Contact = () => {
         transition: { delay: 1, duration: 0.4, ease: "easeIn" },
       }}
     >
+      {/* Contact Section Heading */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  }}
+  className="text-center mb-12"
+>
+  <h3 className="text-sm uppercase tracking-[6px] text-emerald-300 mb-3">
+    Get In Touch
+  </h3>
+  <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">
+    Contact <span className="text-emerald-300">Me</span>
+  </h1>
+ 
+</motion.div>
+
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}

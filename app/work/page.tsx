@@ -128,6 +128,26 @@ const handleSlideChange = (swiper: SwiperType) => {
      }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
+      <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  }}
+  className="text-center mb-20"
+>
+  <h3 className="text-sm uppercase tracking-[6px] text-emerald-300 mt-30">
+    My Projects
+  </h3>
+  <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">
+    My <span className="text-emerald-300">Work</span>
+  </h1>
+  <p className="max-w-2xl mx-auto text-white/70 text-sm sm:text-base leading-relaxed">
+    A showcase of my latest creations — blending design, development, and
+    creativity to build projects that make an impact.
+  </p>
+</motion.div>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
