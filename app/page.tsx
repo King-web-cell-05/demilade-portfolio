@@ -4,10 +4,11 @@ import Socials from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Services from "./services/page";
+import Resume from "./resume/page"
 
 const Home = () => {
   return (
-    <section className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-visible max-[700px]:top-60 min-[750px]:top-95">
+    <section className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-visible max-[700px]:top-60 max-[1250px]:top-95">
       <div className="container mx-auto h-full flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-between gap-2 sm:gap-12 xl:gap-15 relative">
         {/* Left side: Text + Stats */}
         <div className="flex flex-col items-center xl:items-start text-center xl:text-left order-2 xl:order-none relative z-10 px-2 sm:px-0">
@@ -69,6 +70,11 @@ const Home = () => {
       <section className="w-full mt-20 sm:mt-28">
         <Services />
       </section>
+       <section className="w-full mt-20 sm:mt-28">
+        <Resume />
+      </section>
+
+
     </section>
   );
 };
