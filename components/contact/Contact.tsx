@@ -93,9 +93,9 @@ const Contact = () => {
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" },
   }}
-  className="text-center mb-12"
+  className="text-center mb-22"
 >
-  <h3 className="text-sm uppercase tracking-[6px] text-emerald-300 mb-3">
+  <h3 className="text-sm uppercase tracking-[6px] text-emerald-300 mt-25">
     Get In Touch
   </h3>
   <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">

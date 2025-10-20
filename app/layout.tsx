@@ -1,11 +1,15 @@
 import "./globals.css";
 import { JetBrains_Mono, Poppins } from "next/font/google";
-import Header from "@/components/ui/Header";
+import ClientHeader from "@/components/ClientHeader";
 import Pagetransition from "@/components/Pagetransition";
 import Stairtransition from "@/components/Stairtransition";
 import { ReactNode } from "react";
+import Services from "@/components/services/Services";
+import Home from "./page";
+import Contact from "@/components/contact/Contact";
+import Work from "@/components/work/Work";
+import Resume from "@/components/resume/Resume";
 
-// Load fonts
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -22,21 +26,15 @@ export const metadata = {
   title: "Kingsley Portfolio",
   description:
     "Full-stack developer portfolio showcasing modern web design and interactive projects",
-  
- 
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${jetbrainsMono.variable} ${poppins.variable}`}
-    >
-      <head>
-
-      </head>
+    <html lang="en" className={`${jetbrainsMono.variable} ${poppins.variable}`}>
       <body className="antialiased">
-        <Header />
+        {/* Use the client header wrapper */}
+        <ClientHeader />
+      
         <Stairtransition />
         <Pagetransition>{children}</Pagetransition>
       </body>

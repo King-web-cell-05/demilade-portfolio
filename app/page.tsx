@@ -3,15 +3,16 @@ import { FiDownload } from "react-icons/fi";
 import Socials from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
-import Services from "./services/page";
-import Resume from "./resume/page"
-import Work from "./work/page"
-import Contact from "./contact/page"
+import Services from "@/components/services/Services";
+import Resume from "@/components/resume/Resume"
+import Work from "@/components/work/Work"
+import Contact from "@/components/contact/Contact"
+
 const Home = () => {
   return (
-    <section className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-8 overflow-visible max-[700px]:top-60 max-[1250px]:top-95">
+    <section id="home" className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[700px]:top-70 max-[1250px]:top-95">
+      
       <div className="container mx-auto h-full flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-between gap-2 sm:gap-12 xl:gap-15 relative">
-        {/* Left side: Text + Stats */}
         <div className="flex flex-col items-center xl:items-start text-center xl:text-left order-2 xl:order-none relative z-10 px-2 sm:px-0">
           <span className="block text-xs sm:text-base max-[320px]:text-[7px]">
             Software Developer
@@ -26,7 +27,7 @@ const Home = () => {
 
           <p className="max-w-[500px] mb-1 sm:mb-9 text-white/80 text-xs sm:text-base mx-auto xl:mx-0 max-[320px]:text-[8px] leading-tight">
             I excel in crafting efficient and scalable software solutions that
-            drive innovation and enhance user experiences.
+            drive innovation and enhanc e user experiences.
           </p>
 
           <div className="flex flex-col xl:flex-row items-center gap-2 sm:gap-8 justify-center xl:justify-start">
@@ -34,7 +35,7 @@ const Home = () => {
               variant="outline"
               size="sm"
               className="uppercase flex items-center gap-1 sm:gap-3 px-2 py-1 sm:px-4 sm:py-3 text-sm sm:text-lg 
-                max-[320px]:px-[3px] max-[344px]:py-[1px] max-[320px]:text-[8px]"
+                max-[280px]:px-[3px] max-[344px]:py-[1px] max-[280px]:text-[8px]"
             >
               <span>Download CV</span>
               <FiDownload className="text-lg sm:text-2xl max-[344px]:text-[10px]" />
@@ -56,13 +57,13 @@ const Home = () => {
           </div>
 
           {/* Stats integrated into the hero section */}
-          <div className="mt-10 w-full flex justify-center xl:justify-start max-{600">
+          <div className="mt-10 w-full flex justify-center xl:justify-start max-[600px] max-[600px]:scale-100">
             <Stats />
           </div>
         </div>
 
         {/* Right side: Photo */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[320px]:scale-[0.5] min-[400px]:scale-[1.2] min-[700px]:-top-36 min-[320px]:-top-35">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[280px]:scale-[0.5] min-[400px]:scale-[1.2] min-[700px]:-top-36 min-[280px]:-top-35">
           <Photo />
         </div>
       </div>
