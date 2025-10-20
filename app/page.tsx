@@ -7,6 +7,7 @@ import Services from "@/components/services/Services";
 import Resume from "@/components/resume/Resume"
 import Work from "@/components/work/Work"
 import Contact from "@/components/contact/Contact"
+import Footer from "@/components/footer/Footer";
 
 const Home = () => {
   return (
@@ -80,6 +81,9 @@ const Home = () => {
       </section>
         <section id="contact" className="w-full mt-45 sm:mt-28">
         <Contact />
+      </section>
+        <section id="resume" className="w-full mt-20 sm:mt-28">
+        <Footer/>
       </section>
 
 
