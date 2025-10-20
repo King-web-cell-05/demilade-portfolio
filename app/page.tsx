@@ -78,7 +78,7 @@ const Home = () => {
        <section id="work" className="w-full mt-150 sm:mt-28">
         <Work />
       </section>
-        <section id="contact" className="w-full mt-150 sm:mt-28">
+        <section id="contact" className="w-full mt-45 sm:mt-28">
         <Contact />
       </section>
 

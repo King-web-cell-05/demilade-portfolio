@@ -15,6 +15,7 @@ const links = [
 const Mobilenav = () => {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  
 
   // scroll to section when clicking
   const handleScroll = (id: string) => {
