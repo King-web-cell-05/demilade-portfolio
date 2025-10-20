@@ -23,7 +23,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Kingsley Portfolio",
+  title: "Kingsley-Portfolio",
   description:
     "Full-stack developer portfolio showcasing modern web design and interactive projects",
 };
