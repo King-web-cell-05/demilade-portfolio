@@ -9,6 +9,9 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import profilePic from "@/public/king-pic.jpg"
+import Image from "next/image";
+
 
 const Footer = () => {
   const socialLinks = [
@@ -62,9 +65,20 @@ const Footer = () => {
       <div className="container mx-auto px-6 xl:px-0 flex flex-col xl:flex-row justify-between gap-12 xl:gap-24">
         {/* Branding */}
         <div className=" xl:text-left">
-          <h1 className="text" title="Kingsley">
+            <div className="flex gap-5">
+                       <div className="w-12 h-12 xl:w-15 xl:h-15 relative rounded-full overflow-hidden border-2 border-emerald-300">
+                        <Image
+                          src={profilePic}
+                          alt="Kingsley"
+                          fill
+                          className="object-cover"
+                          priority
+                        />
+                      </div>
+          <h1 className="text mt-2" title="Kingsley">
             Kingsley<span className="text-emerald-300">.</span>
           </h1>
+            </div>
           <p className="text-white/70 mt-3 max-w-xs mx-auto xl:mx-0">
             Crafting beautiful web experiences with passion & precision. Let's
             build something amazing together.
